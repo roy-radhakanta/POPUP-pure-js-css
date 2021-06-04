@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --font-family: 'Poppins', sans-serif;
+    --nav-image-max-width: 100%;
+    --accent-color: #3E3E3E;
+    --main-color: #FF8E26;
+    --gradient-effect:  linear-gradient(180deg, rgba(255, 142, 38, 0.2432) 0%, rgba(254, 162, 78, 0.19) 100%);
+    --border: 1px solid rgba(255, 142, 38, 0.53);
+    --backdrop-filter: blur(4px);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-family);
+}
+
+.container {
+    max-width: 100%;
+    width: 114rem;
+    height: 100vh;
+}
+
+  /* _____ FLEX / ALL POSITONS _____ */
+.flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+  /* _____ FLEX / ALL POSITONS _____ */
+
+.w-50{
+    width:50%; padding: 0 15px;
+}
+.w-100{
+    width: 100%;
+}
+.h-100vh{
+    height: 100vh;
+}
+
+/* ----------------------------------------------- */
+
+/* -%%%%%%%%%%%%%%%%%%%% START:: POPUPBOX %%%%%%%%%%%%%%%%%%%% */
+.popupx{
+    display: none;
+    text-align: center;
+    position: fixed;
+    bottom:2;
+    right: 2rem;
+    width: 746px;
+    border-radius: 10px;
+    padding: 2%;
+    background: var(--gradient-effect);
+    border: var(--border);
+    backdrop-filter: var(--backdrop-filter);
+    -webkit-backdrop-filter: var(--backdrop-filter);
+    transition: all 1s ease-in-out;
+   
+}
+.popupx.show{
+    animation: slideUp .8s ease-in-out;
+}
+
+.popupx__equal__mb{
+    margin-bottom:21px;
+}
+.popupx__txt--bold{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.popupx__cross{
+    cursor: pointer;
+    position:absolute;
+    top: 3%;
+    right: 2%;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 142, 38, 0.37);
+    border: 1px solid rgba(255, 142, 38, 0.46);
+    box-sizing: border-box;
+    box-shadow: 0px 11px 36px -1px rgba(255, 142, 38, 0.59);
+    backdrop-filter: blur(19px);
+    -webkit-backdrop-filter: blur(19px);
+    text-align: center;
+}
+
+.popupx__bdy--button button {
+    box-shadow: 0px 12px 65px 2px rgba(255, 122, 0, 0.49);
+    border: none;
+    padding: 0.6rem 2rem;
+    cursor: pointer;
+    border-radius: 3px; 
+    background: var(--main-color);
+    font-size: 18px;
+}
+
+.popupx__bdy--button button:hover{
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 3px 25px 2px rgba(255, 122, 0, 0.49);
+    transform: scale(.95);
+}
+
+.popupx__link--setting{
+    text-decoration-color: var(--main-color);
+    color: var(--main-color);
+}
+
+.trig__but{
+    margin:2%;
+}
+
+/* @media */
+@media only screen and (max-width: 1000px){
+    .popupx {
+        text-align: center;
+        position: fixed;
+        right: 0rem;
+        width: 90%;
+        border-radius: 10px;
+        padding: 4% 2%;
+        background: var(--gradient-effect);
+        border: var(--border);
+        backdrop-filter: var(--backdrop-filter);
+        -webkit-backdrop-filter: var(--backdrop-filter);
+        transition: all 1s ease-in-out;
+        animation: slideUp .8s ease-in-out;
+        margin: 1rem;
+    }
+    .popupx__txt--bold {
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .popupx__txt--light{
+        font-size: 10px;
+    }
+    .popupx__cross {
+        top: 2%;
+        right: 2%;
+        width: 28px;
+        height: 28px;
+    }
+    .popupx__bdy--button button {
+        padding: 0.6rem 1rem;
+        font-size: 15px;
+    }
+    .popupx__head-img img{
+        width: 60px;
+    }
+    .popupx__equal__mb {
+        margin-bottom: 10px;
+    }
+}
+
+/* @keyframes */
+@keyframes slideUp {
+    0%{
+        transform: translateY(80rem);
+    }
+    100%{
+        transform: translateY(8rem);
+    }
+}
+
+/* -%%%%%%%%%%%%%%%%%%%% END:: POPUPBOX %%%%%%%%%%%%%%%%%%%% */
